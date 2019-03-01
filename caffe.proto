@@ -1,0 +1,12 @@
+//将SoftmaxParampamter修改如下：
+message SoftmaxParameter {
+  enum Engine{
+    DEFAULT = 0;
+    CAFFE = 1;
+    CUDNN = 2;
+  }
+  optional Engine engine =1 [default = DEFAULT];
+  optional int32 axis = 2 [default = 1];
+  optional bool use_hard_mining = 3 [default = false];
+  optional int32 batch_size = 4 [default = 1];
+  optional float hard_ra
